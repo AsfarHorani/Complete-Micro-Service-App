@@ -1,0 +1,18 @@
+package com.asfar.patient_service.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+@RestController
+public class Index {
+	 @Autowired
+	    private RestTemplate restTemplate;
+	// index
+		@GetMapping("/")
+		public List<?> home() {
+			return this.restTemplate.getForObject("http://hospital-service/doctor/getFoctors/"+ List.class);
+
+		}
+}

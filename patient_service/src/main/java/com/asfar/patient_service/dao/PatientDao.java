@@ -1,0 +1,16 @@
+package com.asfar.patient_service.dao;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.asfar.patient_service.entites.*;
+
+public interface PatientDao extends JpaRepository<Patient,Long>{
+	
+	Patient findByemail(String email);
+	Patient findBymobileNo(long mobileNo);
+    List<Patient> findAllBydeleted(boolean deleted);
+
+	
+}
