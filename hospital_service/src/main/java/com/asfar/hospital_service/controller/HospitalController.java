@@ -65,6 +65,7 @@ public class HospitalController {
 				h.getLocation(),
 				h.getHtype().toString()
 				);
+				
 		return new ResponseEntity<>(hdt, HttpStatus.OK);
 
 		

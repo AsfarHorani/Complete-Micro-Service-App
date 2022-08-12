@@ -10,5 +10,5 @@ import com.asfar.hospital_service.entities.*;
 
 public interface HospitalDao  extends JpaRepository<Hospital,Long>{
     List<Hospital> findAllBydeleted(boolean deleted);
-
+    
 }

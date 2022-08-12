@@ -11,7 +11,9 @@ public class DoctorDto {
 	String email;	
 	private long hospitalId;
 	
-	
+	public DoctorDto() {
+		
+	}
 	
 	
 	public DoctorDto(long id, String name, String dept, int age, long mobileNo, String address, String email,

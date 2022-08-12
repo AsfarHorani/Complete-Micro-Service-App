@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.web.client.RestTemplate;
 
 import com.asfar.patient_service.entites.*;
 
@@ -28,6 +28,8 @@ public class PatientController {
 
 	@Autowired
 	public PatientService patientService;
+	@Autowired
+    private RestTemplate restTemplate;
 
 	
 	@GetMapping("/getPatients")
@@ -87,7 +89,7 @@ public class PatientController {
 		if(reqBody.getDoctorId()!=0L)
 		{
 			
-//			d = doctorService.getDoctor(reqBody.getDoctorId());
+		     d = this.restTemplate.getForObject("http://doctor-service/doctor/getDoctor/"+reqBody.getDoctorId(), DoctorDto.class);
 
 		}
 		
@@ -117,7 +119,7 @@ public class PatientController {
 			long doctorId = poh.getDoctorId();
 			long patientId = poh.getPatientId();
 			Patient patient = this.patientService.getPatient(patientId);
-			//Doctor d = doctorService.getDoctor(doctorId);
+		   DoctorDto  d = this.restTemplate.getForObject("http://doctor-service/doctor/getDoctor/"+poh.getDoctorId(), DoctorDto.class);
 			patient.setName(poh.getName());
 			patient.setAddress(poh.getAddress());
 			patient.setAge(poh.getAge());
