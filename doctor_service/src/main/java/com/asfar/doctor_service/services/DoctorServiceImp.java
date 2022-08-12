@@ -41,8 +41,8 @@ public class DoctorServiceImp implements DoctorService{
 		 if(newd!=null) {
 				throw new GeneralException("This mobile number is already in use", HttpStatus.CONFLICT);
 	     	}
-		dd.save(doctor);
-		return doctor;
+		
+		return dd.save(doctor);
 	}
 
 	@Override

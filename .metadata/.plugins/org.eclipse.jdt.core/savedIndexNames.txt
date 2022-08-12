@@ -20,7 +20,6 @@ INDEX VERSION 1.131+/home/vend-asfar/Documents/Spring Learning/Complete Micro Se
 1391986595.index
 123438303.index
 4056159850.index
-507747276.index
 3595517007.index
 1010084573.index
 1325127201.index

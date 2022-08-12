@@ -57,7 +57,15 @@ public class DoctorController {
 	@GetMapping("/getDoctor/{doctorId}")
 	public ResponseEntity<DoctorDto> getDoctor(@PathVariable String doctorId) {
 		Doctor d = this.doctorService.getDoctor(Long.parseLong(doctorId));
-		DoctorDto doc = new DoctorDto(d.getId(), d.getName(), d.getDept().toString(), d.getAge(), d.getMobileNo(),
+		System.out.println(d.toString());
+		
+//DoctorDto(long id, String name, String dept, int age, long mobileNo, String address, String email,
+//          long hospitalId) {
+		String dep=null;			
+		if(d.getDept()!=null) {
+						dep = d.getDept().toString();
+					}
+		DoctorDto doc = new DoctorDto(d.getId(), d.getName(), dep, d.getAge(), d.getMobileNo(),
 				d.getAddress(), d.getEmail(), d.getHospitalId());
 		return new ResponseEntity<>(doc, HttpStatus.OK);
 
@@ -84,7 +92,7 @@ public class DoctorController {
 		doctor.setMobileNo(reqBody.getMobileNo());
 
 		Doctor d = this.doctorService.addDoctor(doctor);
-		
+	
 		DoctorDto doc = new DoctorDto(d.getId(), d.getName(), d.getDept().toString(), d.getAge(), d.getMobileNo(),
 				d.getAddress(), d.getEmail(), d.getHospitalId());
 	

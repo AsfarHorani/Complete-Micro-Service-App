@@ -1,5 +1,6 @@
 package responsedto;
 
+
 public class DoctorDto {
 	
 	private long id;
@@ -11,7 +12,9 @@ public class DoctorDto {
 	String email;	
 	private long hospitalId;
 	
-	
+	public DoctorDto() {
+		
+	}
 	
 	
 	public DoctorDto(long id, String name, String dept, int age, long mobileNo, String address, String email,
@@ -27,14 +30,10 @@ public class DoctorDto {
 		this.hospitalId = hospitalId;
 	}
 
-	
-	
-	
+
 	public long getId() {
 		return id;
 	}
-
-
 
 
 	public void setId(long id) {
@@ -42,50 +41,82 @@ public class DoctorDto {
 	}
 
 
-
-
 	public String getName() {
 		return name;
 	}
+
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
+
 	public String getDept() {
 		return dept;
 	}
+
+
 	public void setDept(String dept) {
 		this.dept = dept;
 	}
+
+
 	public int getAge() {
 		return age;
 	}
+
+
 	public void setAge(int age) {
 		this.age = age;
 	}
+
+
 	public long getMobileNo() {
 		return mobileNo;
 	}
-	public void setMobileNo(int mobileNo) {
+
+
+	public void setMobileNo(long mobileNo) {
 		this.mobileNo = mobileNo;
 	}
+
+
 	public String getAddress() {
 		return address;
 	}
+
+
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
+
 	public String getEmail() {
 		return email;
 	}
+
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+
 	public long getHospitalId() {
 		return hospitalId;
 	}
+
+
 	public void setHospitalId(long hospitalId) {
 		this.hospitalId = hospitalId;
 	}
+
+
+	@Override
+	public String toString() {
+		return "DoctorDto [id=" + id + ", name=" + name + ", dept=" + dept + ", age=" + age + ", mobileNo=" + mobileNo
+				+ ", address=" + address + ", email=" + email + ", hospitalId=" + hospitalId + "]";
+	}
+
 	
 	
 	
