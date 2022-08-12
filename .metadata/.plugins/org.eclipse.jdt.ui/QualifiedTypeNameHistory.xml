@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.spring.task1.services.HospitalService"/>
+    <fullyQualifiedTypeName name="com.spring.task1.Utils.H_Type"/>
+    <fullyQualifiedTypeName name="com.asfar.hospital_service.dao.HospitalDao"/>
+    <fullyQualifiedTypeName name="com.spring.task1.exceptionHandler.GeneralException"/>
+    <fullyQualifiedTypeName name="com.asfar.hospital_service.entities.Hospital"/>
+    <fullyQualifiedTypeName name="com.asfar.hospital_service.Utils.H_Type"/>
+    <fullyQualifiedTypeName name="com.asfar.doctor_service.entites.Doctor"/>
+    <fullyQualifiedTypeName name="com.asfar.doctor_service.Utils.H_Type"/>
+    <fullyQualifiedTypeName name="com.asfar.doctor_service.Utils.Department"/>
+    <fullyQualifiedTypeName name="com.asfar.doctor_service.DoctorServiceApplication"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.netflix.eureka.server.EnableEurekaServer"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.netflix.eureka.EnableEurekaClient"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+</qualifiedTypeNameHistroy>

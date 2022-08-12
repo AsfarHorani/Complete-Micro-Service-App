@@ -1,0 +1,7 @@
+package com.asfar.hospital_service.Utils;
+
+public enum Department {
+		   GASTROENTEROLOGIST, DERMATOLOGIST, UROLOGIST, GYNECOLOGIST,PSYCHATRIST;
+		
+
+}
